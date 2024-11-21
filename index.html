@@ -8,8 +8,7 @@
       body {
         font-family: "Poppins", sans-serif;
         background-image: linear-gradient(
-          /*foi feito um gradiente no fundo, não quis colocar imagem, pois geralmente da erro*/
-            to right,
+          to right,
           rgb(20, 150, 150),
           rgb(17, 54, 150)
         );
@@ -58,7 +57,7 @@
         pointer-events: none;
         transition: 0.5s;
       }
-      .inputUser:focus ~ .labelInput,    /* fazer com que o input suba quando for preencher*/
+      .inputUser:focus ~ .labelInput,
       .inputUser:valid ~ .labelInput {
         top: -20px;
         font-size: 12px;
@@ -73,7 +72,7 @@
       }
       #submit {
         background-image: linear-gradient(
-          /*deixando o botão de enviar com degrade*/ to right,
+          to right,
           rgb(20, 150, 150),
           rgb(17, 54, 150)
         );
@@ -88,7 +87,65 @@
       }
 
       #submit:hover {
-        box-shadow: 0 0 5px 1px rgba(1, 255, 255, 0.89); /*deixando o botao de enviar com efeito no borda*/
+        box-shadow: 0 0 5px 1px rgba(1, 255, 255, 0.89);
+      }
+
+      /* Responsividade */
+      @media screen and (max-width: 768px) {
+        .box {
+          width: 90%;
+          padding: 15px;
+        }
+
+        fieldset {
+          border-width: 2px;
+        }
+
+        legend {
+          font-size: 16px;
+        }
+
+        .inputUser {
+          font-size: 14px;
+        }
+
+        label {
+          font-size: 12px;
+        }
+
+        #submit {
+          padding: 10px;
+          font-size: 14px;
+        }
+      }
+
+      @media screen and (max-width: 480px) {
+        body {
+          background-image: none;
+          background-color: rgb(17, 54, 150);
+        }
+
+        .box {
+          width: 95%;
+          padding: 10px;
+        }
+
+        fieldset {
+          border-width: 1px;
+        }
+
+        legend {
+          font-size: 14px;
+        }
+
+        .inputUser {
+          font-size: 12px;
+        }
+
+        #submit {
+          padding: 8px;
+          font-size: 12px;
+        }
       }
     </style>
   </head>
